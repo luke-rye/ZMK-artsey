@@ -5,3 +5,7 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      # This tells the robot to be very strict about the board search
+      build_matrix_path: "build.yaml"
+      config_path: "config"
