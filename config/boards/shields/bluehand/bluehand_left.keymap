@@ -28,4 +28,17 @@
 #define TRAILING_NONES NONE(0, 0, 0)
 
 // Include main ardux.io keymap
-#include "ardux.dtsi"
+#include "../../../ardux.dtsi"
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp S      &kp T      &kp R      &kp A
+                &kp O      &kp I      &kp Y      &kp E
+            >;
+        };
+    };
+};
